@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+/*
+    PROBLEM STATEMENT:
+
+    Given an integer n, compute the sum of its digits.
+
+    Output the sum of all digits of n.
+*/
+
 int main() {
     int n;
     cin >> n; // read the number

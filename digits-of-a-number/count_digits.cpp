@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+/*
+    PROBLEM STATEMENT:
+
+    Given an integer n, determine how many digits it has.
+
+    For n = 0, the number of digits is 1.
+*/
+
 int main() {
     int n;
     cin >> n; // read the number
@@ -13,7 +21,7 @@ int main() {
 
     int count = 0; // initialize digit counter
 
-    // count how many digits the number has
+    // count digits by repeatedly removing last digit
     while(n > 0) {
         count++;    // increase digit count
         n = n / 10; // remove last digit

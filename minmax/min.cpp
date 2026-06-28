@@ -1,21 +1,30 @@
-#include <iostream>   // library for input/output (cin, cout)
+#include <iostream>
 using namespace std;
+
+/*
+    PROBLEM STATEMENT:
+
+    Given an array of n integers, determine the minimum element in the array.
+
+    Output the smallest value found.
+*/
 
 int main() {
     int n;
-    cin >> n; // read the number of elements
+    cin >> n; // read number of elements
 
     int x;
-    cin >> x; // read the first element
-    int minimum = x; // assume the first element is the initial minimum
+    cin >> x; // read first element
 
-    // iterate through the rest of the elements
+    int minimum = x; // initialize minimum with first element
+
+    // read remaining elements and update minimum
     for(int i = 2; i <= n; i++) {
-        cin >> x; // read next element
+        cin >> x;
 
-        // check if current element is smaller than the current minimum
-        if(x < minimum)
-            minimum = x; // update the minimum
+        if(x < minimum) {
+            minimum = x; // update minimum if current element is smaller
+        }
     }
 
     cout << minimum; // print the minimum value

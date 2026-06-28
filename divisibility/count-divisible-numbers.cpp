@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+/*
+    PROBLEM STATEMENT:
+
+    Given an array of n integers and an integer d,
+    determine how many numbers in the array are divisible by d.
+
+    Output the count of such numbers.
+*/
+
 int main() {
     int n, d;
     cin >> n >> d; // read number of elements and divisor

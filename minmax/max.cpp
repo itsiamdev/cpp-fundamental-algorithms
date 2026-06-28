@@ -1,24 +1,33 @@
-#include <iostream>   // library for input/output (cin, cout)
+#include <iostream>
 using namespace std;
+
+/*
+    PROBLEM STATEMENT:
+
+    Given an array of n integers, determine the maximum element in the array.
+
+    Output the largest value found.
+*/
 
 int main() {
     int n;
-    cin >> n; // read the number of elements in the sequence
+    cin >> n; // read number of elements
 
     int x;
-    cin >> x; // read the first element
-    int maximum = x; // assume the first element is the initial maximum
+    cin >> x; // read first element
 
-    // iterate through the rest of the elements (from 2nd to n-th)
+    int maximum = x; // initialize maximum with first element
+
+    // read remaining elements and update maximum
     for(int i = 2; i <= n; i++) {
-        cin >> x; // read the next element
+        cin >> x;
 
-        // check if the current element is greater than the current maximum
-        if(x > maximum)
-            maximum = x; // update the maximum if needed
+        if(x > maximum) {
+            maximum = x; // update maximum if current element is larger
+        }
     }
 
-    cout << maximum; // print the maximum value found
+    cout << maximum; // print the maximum value
 
-    return 0; // end of program
+    return 0;
 }
