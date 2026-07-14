@@ -85,6 +85,10 @@ cpp-fundamental-algorithms/
 │   ├── recursive_palindrome.cpp
 │   └── flood_fill.cpp
 │
+├── divide-et-impera/
+│   ├── merge_sort.cpp
+│   └── quick_sort.cpp
+│
 └── README.md
   ```
 
@@ -119,6 +123,7 @@ g++ file.cpp -o output
 * Control Flow Instructions
 * Subprograms (Functions)
 * Recursion (Recursive Digit Processing & Flood Fill)
+* Divide et Impera (Merge Sort & Quick Sort)
 
 ---
 
@@ -491,6 +496,35 @@ flowchart TD
     K --> L["Print filled matrix"]
     L --> Z
     F --> Z
+```
+
+---
+
+### 24. Merge Sort (Sortare prin interclasare)
+
+```mermaid
+flowchart TD
+    A["Start: mergeSort(left, right)"] --> B{"left >= right?"}
+    B -->|"Yes"| Z["End (single element)"]
+    B -->|"No"| C["mid = (left + right) / 2"]
+    C --> D["mergeSort(left, mid)"]
+    D --> E["mergeSort(mid + 1, right)"]
+    E --> F["merge(left, mid, right)"]
+    F --> Z
+```
+
+---
+
+### 25. Quick Sort (Sortare rapida)
+
+```mermaid
+flowchart TD
+    A["Start: quickSort(left, right)"] --> B{"left >= right?"}
+    B -->|"Yes"| Z["End (single element)"]
+    B -->|"No"| C["p = partition(left, right)"]
+    C --> D["quickSort(left, p - 1)"]
+    D --> E["quickSort(p + 1, right)"]
+    E --> Z
 ```
 
 ---
