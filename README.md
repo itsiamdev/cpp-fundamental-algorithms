@@ -77,8 +77,16 @@ cpp-fundamental-algorithms/
 │   ├── call_stack.cpp
 │   └── more_about_functions.cpp
 │
+├── recursion/
+│   ├── recursive_count_digits.cpp
+│   ├── recursive_sum_digits.cpp
+│   ├── recursive_print_digits.cpp
+│   ├── recursive_reverse_number.cpp
+│   ├── recursive_palindrome.cpp
+│   └── flood_fill.cpp
+│
 └── README.md
- ```
+  ```
 
 ---
 
@@ -110,6 +118,7 @@ g++ file.cpp -o output
 * Fibonacci Sequence
 * Control Flow Instructions
 * Subprograms (Functions)
+* Recursion (Recursive Digit Processing & Flood Fill)
 
 ---
 
@@ -445,6 +454,43 @@ flowchart TD
     C --> G["End"]
     E --> G
     F --> G
+```
+
+---
+
+### 22. Recursive Digit Processing (generic)
+
+```mermaid
+flowchart TD
+    A["Start: read n"] --> B{"Base case?<br/>n < 10 or n == 0"}
+    B -->|"Yes"| C["Return / handle last digit"]
+    B -->|"No"| D["Process n % 10<br/>(current digit)"]
+    D --> E["Recurse with n / 10<br/>(remaining digits)"]
+    E --> F["Combine result"]
+    C --> F
+    F --> G["End"]
+```
+
+---
+
+### 23. Flood Fill (Algoritm de umplere)
+
+```mermaid
+flowchart TD
+    A["Start: read matrix, start cell, new color"] --> B["target = matrix[start]"]
+    B --> C{"target == new color?"}
+    C -->|"Yes"| Z["End"]
+    C -->|"No"| D["Call floodFill(start)"]
+    D --> E{"Cell in bounds and<br/>color == target?"}
+    E -->|"No"| F["Return"]
+    E -->|"Yes"| G["matrix[r][c] = new color"]
+    G --> H["floodFill up"]
+    H --> I["floodFill down"]
+    I --> J["floodFill left"]
+    J --> K["floodFill right"]
+    K --> L["Print filled matrix"]
+    L --> Z
+    F --> Z
 ```
 
 ---
