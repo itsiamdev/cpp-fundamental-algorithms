@@ -89,6 +89,11 @@ cpp-fundamental-algorithms/
 │   ├── merge_sort.cpp
 │   └── quick_sort.cpp
 │
+├── strings/
+│   ├── ascii_code.cpp
+│   ├── cpp_strings.cpp
+│   └── escape_sequences.cpp
+│
 └── README.md
   ```
 
@@ -124,6 +129,7 @@ g++ file.cpp -o output
 * Subprograms (Functions)
 * Recursion (Recursive Digit Processing & Flood Fill)
 * Divide et Impera (Merge Sort & Quick Sort)
+* Strings (ASCII Codes, C++ Strings & Escape Sequences)
 
 ---
 
@@ -525,6 +531,34 @@ flowchart TD
     C --> D["quickSort(left, p - 1)"]
     D --> E["quickSort(p + 1, right)"]
     E --> Z
+```
+
+---
+
+### 26. C++ Strings (Siruri de caractere)
+
+```mermaid
+flowchart TD
+    A["Start: declare string s"] --> B["Read / build the string"]
+    B --> C["length = s.length()"]
+    C --> D["Iterate characters: for char c in s"]
+    D --> E["Apply operations:<br/>concat / access / compare / substr"]
+    E --> F["Output result"]
+    F --> G["End"]
+```
+
+---
+
+### 27. Escape Sequences (Secvente escape)
+
+```mermaid
+flowchart TD
+    A["Start"] --> B["\\n newline, \\t tab"]
+    B --> C["\\\\ backslash, \\\" quote"]
+    C --> D["\\x41 / \\101 hex / octal"]
+    D --> E["\\0 null terminator"]
+    E --> F["Output with escapes interpreted"]
+    F --> G["End"]
 ```
 
 ---
