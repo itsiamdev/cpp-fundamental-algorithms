@@ -94,6 +94,11 @@ cpp-fundamental-algorithms/
 │   ├── cpp_strings.cpp
 │   └── escape_sequences.cpp
 │
+├── heterogeneous-data/
+│   ├── structs_basics.cpp
+│   ├── array_of_structs.cpp
+│   └── unions.cpp
+│
 └── README.md
   ```
 
@@ -130,6 +135,7 @@ g++ file.cpp -o output
 * Recursion (Recursive Digit Processing & Flood Fill)
 * Divide et Impera (Merge Sort & Quick Sort)
 * Strings (ASCII Codes, C++ Strings & Escape Sequences)
+* Heterogeneous Data Structures (Structs, Arrays of Structs, Unions)
 
 ---
 
@@ -559,6 +565,22 @@ flowchart TD
     D --> E["\\0 null terminator"]
     E --> F["Output with escapes interpreted"]
     F --> G["End"]
+```
+
+---
+
+### 28. Heterogeneous Data Structures
+
+```mermaid
+flowchart TD
+    A["Start: define a struct / union"] --> B["Declare fields of different types"]
+    B --> C["Create instances"]
+    C --> D{"struct or union?"}
+    D -->|"struct"| E["Access members simultaneously"]
+    D -->|"union"| F["Access one member at a time"]
+    E --> G["Use single values or arrays of structs"]
+    F --> G
+    G --> H["End"]
 ```
 
 ---
