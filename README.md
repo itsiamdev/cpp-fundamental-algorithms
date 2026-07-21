@@ -103,6 +103,10 @@ cpp-fundamental-algorithms/
 │   ├── stack.cpp
 │   └── queue.cpp
 │
+├── linked-lists/
+│   ├── singly_linked_list.cpp
+│   └── doubly_linked_list.cpp
+│
 └── README.md
   ```
 
@@ -141,6 +145,7 @@ g++ file.cpp -o output
 * Strings (ASCII Codes, C++ Strings & Escape Sequences)
 * Heterogeneous Data Structures (Structs, Arrays of Structs, Unions)
 * Linear Data Structures (Stack & Queue)
+* Dynamically Allocated Linked Lists (Singly & Doubly Linked Lists)
 
 ---
 
@@ -620,6 +625,39 @@ flowchart TD
     F -->|"Yes"| C
     F -->|"No"| G["empty()? check if queue is empty"]
     G --> H["End"]
+```
+
+---
+
+### 31. Singly Linked List (Lista simplu inlantuie)
+
+```mermaid
+flowchart TD
+    A["Start"] --> B["Create new node"]
+    B --> C{"Insert position?"}
+    C -->|"Front"| D["new->next = head; head = new"]
+    C -->|"End"| E["walk to last node; last->next = new"]
+    E --> F["Delete by value: find node, relink, delete"]
+    D --> F
+    F --> G{"Display list"]
+    G --> H["End"]
+```
+
+---
+
+### 32. Doubly Linked List (Lista dublu inlantuie)
+
+```mermaid
+flowchart TD
+    A["Start"] --> B["Create new node with prev and next"]
+    B --> C{"Insert position?"}
+    C -->|"Front"| D["new->next = head; head->prev = new; head = new"]
+    C -->|"End"| E["new->prev = tail; tail->next = new; tail = new"]
+    E --> F["Delete by value: update prev/next of neighbors, delete"]
+    D --> F
+    F --> G{"Display forward"]
+    G --> H{"Display backward"]
+    H --> I["End"]
 ```
 
 ---
