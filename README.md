@@ -126,6 +126,11 @@ cpp-fundamental-algorithms/
 │   ├── grid_paths.cpp
 │   └── n_queens.cpp
 │
+├── greedy/
+│   ├── coin_change.cpp
+│   ├── activity_selection.cpp
+│   └── fractional_knapsack.cpp
+│
 └── README.md
   ```
 
@@ -170,6 +175,7 @@ g++ file.cpp -o output
 * Geometry Basics (Distance, Area, Perimeter)
 * Miscellaneous Problems (Vowels, Matrix max, Rotation)
 * Backtracking (Subsets, Permutations, Combinations, Grid Paths, N-Queens)
+* Greedy Method (Coin Change, Activity Selection, Fractional Knapsack)
 
 ---
 
@@ -811,6 +817,22 @@ flowchart TD
     G --> D
     C --> H["End"]
     D --> H
+```
+
+---
+
+### 40. Greedy Method (Generic)
+
+```mermaid
+flowchart TD
+    A["Start: prepare candidates"] --> B["Sort by some greedy rule"]
+    B --> C["Initialize solution"]
+    C --> D{"More candidates?"}
+    D -->|"Yes"| E["Pick best local candidate"]
+    E --> F["Add to solution"]
+    F --> D
+    D -->|"No"| G["Output solution"]
+    G --> H["End"]
 ```
 
 ---
