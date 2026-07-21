@@ -107,6 +107,18 @@ cpp-fundamental-algorithms/
 │   ├── singly_linked_list.cpp
 │   └── doubly_linked_list.cpp
 │
+├── combinatorics/
+│   └── basics.cpp
+│
+├── algorithm-analysis/
+│   └── complexity_basics.cpp
+│
+├── geometry/
+│   └── basics.cpp
+│
+├── miscellaneous/
+│   └── problems.cpp
+│
 └── README.md
   ```
 
@@ -146,6 +158,10 @@ g++ file.cpp -o output
 * Heterogeneous Data Structures (Structs, Arrays of Structs, Unions)
 * Linear Data Structures (Stack & Queue)
 * Dynamically Allocated Linked Lists (Singly & Doubly Linked Lists)
+* Combinatorics (Permutations & Combinations)
+* Algorithm Efficiency Analysis (Time Complexity)
+* Geometry Basics (Distance, Area, Perimeter)
+* Miscellaneous Problems (Vowels, Matrix max, Rotation)
 
 ---
 
@@ -658,6 +674,80 @@ flowchart TD
     F --> G{"Display forward"]
     G --> H{"Display backward"]
     H --> I["End"]
+```
+
+---
+
+### 33. Combinatorics
+
+```mermaid
+flowchart TD
+    A["Start: read n, k"] --> B{"k > n?"}
+    B -->|"Yes"| Z["Result = 0"]
+    B -->|"No"| C["Compute n!, k!, (n-k)!"]
+    C --> D{"Operation?"}
+    D -->|"Permutations"| E["P = n! / (n-k)!"]
+    D -->|"Combinations"| F["C = n! / (k! * (n-k)!)"]
+    E --> G["Output result"]
+    F --> G
+    G --> Z
+```
+
+---
+
+### 34. Algorithm Complexity
+
+```mermaid
+flowchart TD
+    A["Start: analyze algorithm"] --> B{"Nested loops?"}
+    B -->|"Yes"| C["O(n^2) or worse"]
+    B -->|"No"| D{"Single loop?"}
+    D -->|"Yes"| E["O(n)"]
+    D -->|"No"| F{"Divide and conquer?"}
+    F -->|"Yes"| G["O(n log n)"]
+    F -->|"No"| H{"Binary search style?"}
+    H -->|"Yes"| I["O(log n)"]
+    H -->|"No"| J["O(1) constant"]
+    C --> K["Output complexity class"]
+    E --> K
+    G --> K
+    I --> K
+    J --> K
+    K --> L["End"]
+```
+
+---
+
+### 35. Geometry Basics
+
+```mermaid
+flowchart TD
+    A["Start: read input"] --> B{"Shape?"}
+    B -->|"Points"| C["Distance: sqrt(dx^2 + dy^2)"]
+    B -->|"Rectangle"| D["Area = w*h; Perimeter = 2*(w+h)"]
+    B -->|"Circle"| E["Area = pi*r^2; Perimeter = 2*pi*r"]
+    B -->|"Triangle"| F["Heron: s = (a+b+c)/2; Area = sqrt(s(s-a)(s-b)(s-c))"]
+    C --> G["Output result"]
+    D --> G
+    E --> G
+    F --> G
+    G --> H["End"]
+```
+
+---
+
+### 36. Miscellaneous Problems
+
+```mermaid
+flowchart TD
+    A["Start: read problem input"] --> B{"Problem type?"}
+    B -->|"String"| C["Count vowels or analyze characters"]
+    B -->|"Matrix"| D["Find max or search for value"]
+    B -->|"Array"| E["Rotate, reverse, or filter"]
+    C --> F["Output result"]
+    D --> F
+    E --> F
+    F --> G["End"]
 ```
 
 ---
