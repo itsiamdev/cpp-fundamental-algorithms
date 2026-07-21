@@ -99,6 +99,10 @@ cpp-fundamental-algorithms/
 │   ├── array_of_structs.cpp
 │   └── unions.cpp
 │
+├── linear-data-structures/
+│   ├── stack.cpp
+│   └── queue.cpp
+│
 └── README.md
   ```
 
@@ -136,6 +140,7 @@ g++ file.cpp -o output
 * Divide et Impera (Merge Sort & Quick Sort)
 * Strings (ASCII Codes, C++ Strings & Escape Sequences)
 * Heterogeneous Data Structures (Structs, Arrays of Structs, Unions)
+* Linear Data Structures (Stack & Queue)
 
 ---
 
@@ -580,6 +585,40 @@ flowchart TD
     D -->|"union"| F["Access one member at a time"]
     E --> G["Use single values or arrays of structs"]
     F --> G
+    G --> H["End"]
+```
+
+---
+
+### 29. Stack (Stiva)
+
+```mermaid
+flowchart TD
+    A["Start: declare stack"] --> B["push(x) -> add to top"]
+    B --> C["top() -> inspect top element"]
+    C --> D{"need to remove?"}
+    D -->|"Yes"| E["pop() -> remove top"]
+    D -->|"No"| F{"continue?"}
+    E --> F
+    F -->|"Yes"| C
+    F -->|"No"| G["empty()? check if stack is empty"]
+    G --> H["End"]
+```
+
+---
+
+### 30. Queue (Coada)
+
+```mermaid
+flowchart TD
+    A["Start: declare queue"] --> B["enqueue(x) -> add to rear"]
+    B --> C["front() -> inspect front element"]
+    C --> D{"need to remove?"}
+    D -->|"Yes"| E["dequeue() -> remove front"]
+    D -->|"No"| F{"continue?"}
+    E --> F
+    F -->|"Yes"| C
+    F -->|"No"| G["empty()? check if queue is empty"]
     G --> H["End"]
 ```
 
