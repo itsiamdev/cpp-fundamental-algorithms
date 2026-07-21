@@ -119,6 +119,13 @@ cpp-fundamental-algorithms/
 ├── miscellaneous/
 │   └── problems.cpp
 │
+├── backtracking/
+│   ├── subsets_backtracking.cpp
+│   ├── permutations_backtracking.cpp
+│   ├── combinations_backtracking.cpp
+│   ├── grid_paths.cpp
+│   └── n_queens.cpp
+│
 └── README.md
   ```
 
@@ -162,6 +169,7 @@ g++ file.cpp -o output
 * Algorithm Efficiency Analysis (Time Complexity)
 * Geometry Basics (Distance, Area, Perimeter)
 * Miscellaneous Problems (Vowels, Matrix max, Rotation)
+* Backtracking (Subsets, Permutations, Combinations, Grid Paths, N-Queens)
 
 ---
 
@@ -748,6 +756,61 @@ flowchart TD
     D --> F
     E --> F
     F --> G["End"]
+```
+
+---
+
+### 37. Backtracking (Subsets / Permutations / Combinations)
+
+```mermaid
+flowchart TD
+    A["Start: backtrack(index)"] --> B{"Base case reached?"}
+    B -->|"Yes"| C["Output current solution"]
+    B -->|"No"| D["Try each candidate from start to n"]
+    D --> E["Choose candidate -> add to current"]
+    E --> F["Recurse: backtrack(index + 1)"]
+    F --> G["Backtrack: remove candidate"]
+    G --> D
+    D --> H["End"]
+    C --> H
+```
+
+---
+
+### 38. Backtracking in Plan (Grid Paths)
+
+```mermaid
+flowchart TD
+    A["Start at (0,0)"] --> B{"Mark current cell as visited"}
+    B --> C{"At destination?"}
+    C -->|"Yes"| D["Record path"]
+    C -->|"No"| E{"Can move right?"}
+    E -->|"Yes"| F["Move right -> recurse"]
+    E -->|"No"| G{"Can move down?"}
+    G -->|"Yes"| H["Move down -> recurse"]
+    G -->|"No"| I["Backtrack: unmark current"]
+    F --> I
+    H --> I
+    D --> I
+    I --> J["End"]
+```
+
+---
+
+### 39. N-Queens (Backtracking - Diverse Problems)
+
+```mermaid
+flowchart TD
+    A["Start: place queen in col 0"] --> B{"Col == n?"}
+    B -->|"Yes"| C["Record solution"]
+    B -->|"No"| D["Try each row in current col"]
+    D --> E{"Safe to place?"}
+    E -->|"Yes"| F["Place queen -> recurse col+1"]
+    E -->|"No"| D
+    F --> G["Backtrack: remove queen"]
+    G --> D
+    C --> H["End"]
+    D --> H
 ```
 
 ---
