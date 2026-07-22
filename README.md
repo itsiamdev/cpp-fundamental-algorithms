@@ -131,6 +131,12 @@ cpp-fundamental-algorithms/
 │   ├── activity_selection.cpp
 │   └── fractional_knapsack.cpp
 │
+├── dynamic-programming/
+│   ├── counting_steps.cpp
+│   ├── binomial_coefficients.cpp
+│   ├── knapsack_01.cpp
+│   └── diverse_dp.cpp
+│
 └── README.md
   ```
 
@@ -176,6 +182,7 @@ g++ file.cpp -o output
 * Miscellaneous Problems (Vowels, Matrix max, Rotation)
 * Backtracking (Subsets, Permutations, Combinations, Grid Paths, N-Queens)
 * Greedy Method (Coin Change, Activity Selection, Fractional Knapsack)
+* Dynamic Programming (Counting Problems, 0/1 Knapsack, LIS, LCS)
 
 ---
 
@@ -833,6 +840,35 @@ flowchart TD
     F --> D
     D -->|"No"| G["Output solution"]
     G --> H["End"]
+```
+
+---
+
+### 41. Dynamic Programming - Counting Problems
+
+```mermaid
+flowchart TD
+    A["Start: read n"] --> B["Initialize dp[0] = 1 or C(base case)"]
+    B --> C["For i from 1 to n"]
+    C --> D["Apply recurrence: dp[i] = f(dp[i-1], dp[i-2], ...)"]
+    D --> C
+    C --> E["Output dp[n]"]
+    E --> F["End"]
+```
+
+---
+
+### 42. Dynamic Programming - Diverse Problems (Knapsack / LIS / LCS)
+
+```mermaid
+flowchart TD
+    A["Start: prepare DP table"] --> B["For each item/state"]
+    B --> C{"Choice A: skip current"]
+    C --> D{"Choice B: take current"}
+    D --> E["Take the better option"]
+    E --> B
+    B --> F["Output dp[n][capacity] or dp[n][m]"]
+    F --> G["End"]
 ```
 
 ---
